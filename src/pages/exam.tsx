@@ -320,7 +320,10 @@ const ExamPage = () => {
                                 ))}
                             </div>
                             <div>
-                             {questionModules[step].link ?   <a href="" target="_blank">{questionModules[step].link}</a> : null}
+                             {questionModules[step].link ?   
+                             <a href={questionModules[step].link} target="_blank" className="bg-blue-500 py-2 px-4 rounded-md text-white">
+                                Click link to download dataset</a> 
+                             : null}
                             </div>
                         </div>
 
@@ -352,6 +355,13 @@ const ExamPage = () => {
                                 {dataScience[step].questions.map((que, i) => (
                                     <p className="capitalize" key={i}>{i + 1}. {que}</p>
                                 ))}
+                            </div>
+
+                               <div>
+                             {dataScience[step].link ?   
+                             <a href={dataScience[step].link} target="_blank" className="bg-blue-500 py-2 px-4 rounded-md text-white">
+                                Click link to download dataset</a> 
+                             : null}
                             </div>
                         </div>
 
