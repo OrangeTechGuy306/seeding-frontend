@@ -314,9 +314,13 @@ const ExamPage = () => {
                             <h1 className="text-xl text-red-500 capitalize">{questionModules[step].subtitle}</h1>
                             <hr />
                             <div className="mt-4 flex flex-col gap-4">
-                                {questionModules[step].questions.map((que, i) => (
+                                {
+                                questionModules[step].questions.map((que, i) => (
                                     <p className="capitalize" key={i}>{i + 1}. {que}</p>
                                 ))}
+                            </div>
+                            <div>
+                             {questionModules[step].link ?   <a href="" target="_blank">{questionModules[step].link}</a> : null}
                             </div>
                         </div>
 
