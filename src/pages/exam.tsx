@@ -312,6 +312,12 @@ const ExamPage = () => {
                         <div className="flex flex-col gap-3">
                             <h1 className="font-bold text-3xl text-blue-500">{questionModules[step].module}</h1>
                             <h1 className="text-xl text-red-500 capitalize">{questionModules[step].subtitle}</h1>
+                                <div>
+                             {questionModules[step].link ?   
+                             <a href={questionModules[step].link} target="_blank" className="bg-blue-500 py-2 px-4 rounded-md text-white">
+                                Click link to download dataset</a> 
+                             : null}
+                            </div>
                             <hr />
                             <div className="mt-4 flex flex-col gap-4">
                                 {
@@ -319,12 +325,7 @@ const ExamPage = () => {
                                     <p className="capitalize" key={i}>{i + 1}. {que}</p>
                                 ))}
                             </div>
-                            <div>
-                             {questionModules[step].link ?   
-                             <a href={questionModules[step].link} target="_blank" className="bg-blue-500 py-2 px-4 rounded-md text-white">
-                                Click link to download dataset</a> 
-                             : null}
-                            </div>
+                        
                         </div>
 
                         {
@@ -350,6 +351,12 @@ const ExamPage = () => {
                         <div className="flex flex-col gap-3">
                             <h1 className="font-bold text-3xl text-blue-500">{dataScience[step].module}</h1>
                             <h1 className="text-xl text-red-500 capitalize">{dataScience[step].subtitle}</h1>
+                              <div>
+                             {dataScience[step].link ?   
+                             <a href={dataScience[step].link} target="_blank" className="bg-blue-500 py-2 px-4 rounded-md text-white">
+                                Click link to download dataset</a> 
+                             : null}
+                            </div>
                             <hr />
                             <div className="mt-4 flex flex-col gap-4">
                                 {dataScience[step].questions.map((que, i) => (
@@ -357,12 +364,6 @@ const ExamPage = () => {
                                 ))}
                             </div>
 
-                               <div>
-                             {dataScience[step].link ?   
-                             <a href={dataScience[step].link} target="_blank" className="bg-blue-500 py-2 px-4 rounded-md text-white">
-                                Click link to download dataset</a> 
-                             : null}
-                            </div>
                         </div>
 
                         {
